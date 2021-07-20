@@ -13,6 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/api', router);
 
+app.get("/",function(req,res){
+   res.send("Working!!!")
+})
+
 
 router.use((request,response,next)=>{
    console.log('middleware');
@@ -27,8 +31,8 @@ router.route('/products').get((request,response)=>{
 
 })
 
- 
-app.listen();
-
+ var port = process.env.PORT || 5000;
+app.listen(port);
+console.log('Order API is runnning at ' + port);
 
 
