@@ -14,7 +14,7 @@ app.use(cors());
 app.use('/api', router);
 
 app.get("/",function(req,res){
-   res.send("Working!!!")
+   res.send("Working Nicely!!!")
 })
 
 
